@@ -16,7 +16,7 @@ namespace RTakk.Data.Service
 
             var header = new JwtHeader(creds);
 
-            //id, aucience, claims, , expire_date
+            //id, aucience, claims, notBefore, expire_date
 
             var pl = new JwtPayload(id.ToString(), null, null, null, DateTime.Now.AddHours(4));
 
