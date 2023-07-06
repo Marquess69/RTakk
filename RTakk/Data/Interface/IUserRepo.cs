@@ -11,5 +11,6 @@ namespace RTakk.Data.Interface
         User CreateUser(User user);
         void DeleteUser(int userId);
         List<User> GetUsersBySearchQuery(string searchQuery);
+        IEnumerable<User> GetUsers();
     }
 }

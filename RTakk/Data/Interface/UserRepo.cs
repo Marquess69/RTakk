@@ -1,4 +1,5 @@
-﻿using RTakk.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using RTakk.Models;
 using System.Linq.Expressions;
 
 namespace RTakk.Data.Interface
@@ -62,6 +63,11 @@ namespace RTakk.Data.Interface
                 .ToList();
 
             return users;
+        }
+
+        public IEnumerable<User> GetUsers()
+        {
+            return _context.Users.ToList();
         }
     }
 }
